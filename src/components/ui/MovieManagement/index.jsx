@@ -116,7 +116,7 @@ export default function MovieManagement({ type = "update", movie, setIsSearching
     };
 
     return (
-        <main className="flex flex-col place-self-center justify-self-center w-[800px] h-[400px] gap-y-[32px] shadow-sm border-[1px] border-solid border-gray-200">
+        <main className="flex flex-col place-self-center justify-self-center w-[800px] gap-y-[32px] shadow-sm border-[1px] border-solid border-gray-200">
             <p className="text-black text-[32px] text-center mt-[32px] font-medium">
                 {type === "update" ? "UPDATE MOVIE" : "DELETE MOVIE"}
             </p>
@@ -149,7 +149,7 @@ export default function MovieManagement({ type = "update", movie, setIsSearching
             ) : (
                 <p className="text-red-500 text-center mt-[32px]">Movie not found</p>
             )}
-            <div className="flex gap-x-[16px] self-center">
+            <div className="flex gap-x-[16px] self-center mb-[32px]">
                 <Button color="#6ee7b7" disabled={isExecuting} onClick={type === "update" ? updateMovie : deleteMovie}>
                     {type === "update" ? "Update" : "Delete"}
                 </Button>
