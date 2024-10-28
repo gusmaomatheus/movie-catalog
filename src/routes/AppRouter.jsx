@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import CreateMovie from "../components/pages/CreateMovie";
+import DeleteMovie from "../components/pages/DeleteMovie";
 import Home from "../components/pages/Home/";
 import MovieDetais from "../components/pages/MovieDetails";
 import NotFound from "../components/pages/NotFound";
@@ -17,6 +18,7 @@ export default function AppRouter() {
                     <Route path="/" element={<Home />} />
                     <Route path="/details/:id" element={<MovieDetais />} />
                     <Route path="/create" element={<CreateMovie />} />
+                    <Route path="/delete" element={<DeleteMovie />} />
                 </Routes>
                 <Footer />
             </MovieProvider>
