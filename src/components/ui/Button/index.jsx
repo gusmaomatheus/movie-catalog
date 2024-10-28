@@ -8,7 +8,7 @@ export default function Button({
     return (
         <button
             type="button"
-            className={`w-[180px] h-[40px] mt-[64px] rounded-md text-white text-[20px] self-center transition duration-300 ease-in-out hover:scale-105`}
+            className={`w-[120px] h-[40px] rounded-md text-white text-[18px] self-center transition duration-300 ease-in-out hover:scale-105`}
             style={{ backgroundColor: color }}
             onClick={onClick}
         >
