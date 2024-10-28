@@ -1,10 +1,13 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { api } from "../../../services/MovieService";
 import Button from "../Button";
 import MovieUpdateForm from "../MovieUpdateForm";
 
 export default function MovieManagement({ type = "update", movie, setIsSearchingMovie }) {
+    const navigate = useNavigate();
+
     const [isExecuting, setIsExecuting] = useState(false);
     const [name, setName] = useState("");
     const [gender, setGender] = useState("");
@@ -46,6 +49,7 @@ export default function MovieManagement({ type = "update", movie, setIsSearching
                     timerProgressBar: true,
                 });
                 setIsSearchingMovie(false);
+                navigateToHome();
             }
         } catch (error) {
             Swal.fire({
@@ -78,6 +82,7 @@ export default function MovieManagement({ type = "update", movie, setIsSearching
                     timerProgressBar: true,
                 });
                 setIsSearchingMovie(false);
+                navigateToHome();
             }
         } catch (error) {
             Swal.fire({
@@ -104,6 +109,10 @@ export default function MovieManagement({ type = "update", movie, setIsSearching
         if (!year) return false;
 
         return true;
+    };
+
+    const navigateToHome = () => {
+        navigate("/");
     };
 
     return (
