@@ -7,9 +7,10 @@ export default function NavBar() {
                 <p className="text-[24px] text-emerald-400 uppercase">Movies</p>
             </div>
             <div className="flex gap-[32px]">
-                <NavLink path="/create">Criar</NavLink>
-                <NavLink path="/update">Alterar</NavLink>
-                <NavLink path="/delete">Remover</NavLink>
+                <NavLink path="/">Home</NavLink>
+                <NavLink path="/create">Create</NavLink>
+                <NavLink path="/update">Update</NavLink>
+                <NavLink path="/delete">Delete</NavLink>
             </div>
         </nav>
     );
