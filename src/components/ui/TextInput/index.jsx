@@ -1,11 +1,7 @@
 import { useId } from "react";
 
-export default function TextInput({ label, placeholder, inputRef }) {
+export default function TextInput({ label, placeholder, value, onChange }) {
     const id = useId();
-
-    const handleInputChange = event => {
-        inputRef.current.value = event.target.value;
-    };
 
     return (
         <div className="flex flex-col relative">
@@ -17,9 +13,9 @@ export default function TextInput({ label, placeholder, inputRef }) {
                 name={id}
                 id={id}
                 placeholder={placeholder}
-                ref={inputRef}
+                value={value}
                 className="w-[360px] px-[12px] pt-[12px] pb-[4px] border-[1px] border-solid border-gray-300 rounded-md text-gray-600 text-[18px] focus:outline-none"
-                onChange={handleInputChange}
+                onChange={event => onChange(event.target.value)}
             />
         </div>
     );
