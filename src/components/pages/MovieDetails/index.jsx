@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { MovieContext } from "../../../contexts/MovieContext";
+import Button from "../../ui/Button";
 
 export default function MovieDetails() {
     const { movies } = useContext(MovieContext);
@@ -31,13 +32,9 @@ export default function MovieDetails() {
             ) : (
                 <p className="text-red-500 text-center mt-[32px]">Movie not found</p>
             )}
-            <button
-                type="button"
-                className="w-[180px] h-[40px] mt-[64px] bg-red-200 rounded-md text-white text-[20px] self-center transition duration-300 ease-in-out hover:bg-red-400 hover:scale-105"
-                onClick={handleNavigateBack}
-            >
+            <Button color="#fca5a5" onClick={handleNavigateBack}>
                 Back
-            </button>
+            </Button>
         </main>
     );
 }
