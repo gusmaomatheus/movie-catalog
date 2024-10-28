@@ -15,10 +15,10 @@ export default function MovieDetails() {
     };
 
     return (
-        <main className="flex flex-col place-self-center justify-self-center w-[900px] h-[400px] mt-[160px] shadow-sm border-[1px] border-solid border-gray-200">
+        <main className="flex flex-col place-self-center justify-self-center w-[800px] h-[330px] mt-[160px] gap-y-[32px] shadow-sm border-[1px] border-solid border-gray-200">
             <p className="text-black text-[32px] text-center mt-[32px] font-medium">MOVIE DETAILS:</p>
             {movie ? (
-                <div className="flex flex-col gap-y-[8px] ms-[48px] mt-[64px]">
+                <div className="flex flex-col gap-y-[8px] ms-[48px]">
                     <p className="text-black text-[20px]">
                         <span className="font-semibold">Name:</span> {movie.name}
                     </p>
